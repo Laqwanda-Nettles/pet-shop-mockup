@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 export default function PetCounter(props) {
   const { images, numberOfPets } = props;
   return (
-    <div className="bg-rose-500 flex justify-normal items-center gap-3 flex-wrap">
+    <div className="bg-rose-500 flex justify-start items-center gap-3">
       <div className="flex">
         {images.map((image, index) => (
           <img
