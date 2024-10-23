@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 export default function PetHeroText(props) {
   const { title, description } = props;
   return (
-    <div className="flex flex-col justify-evenly gap-10 items-start">
-      <h1 className="text-5xl font-bold">{title}</h1>
-      <p className="text-3xl">{description}</p>
+    <div className="flex flex-col justify-between gap-5">
+      <h1 className="text-5xl font-bold leading-tight">{title}</h1>
+      <p className="text-3xl leading-normal">{description}</p>
     </div>
   );
 }
