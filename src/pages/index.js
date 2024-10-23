@@ -3,12 +3,13 @@ import PetHeaderMenu from "../components/PetHeaderMenu";
 import PetCounter from "../components/PetCounter";
 import PetHeroImage from "../components/PetHeroImage";
 import PetCallToAction from "../components/PetCallToAction";
+import PetHeroText from "../components/PetHeroText";
 
 export default function Home() {
   return (
     <div className="bg-rose-500">
       <div class="container mx-auto px-4">
-        <div className="flex justify-around py-3">
+        <div className="flex justify-between items-center py-3">
           <PetHeaderLogo
             logoSrc="/img/paw-face-sm.png"
             brandName="FindAFriend"
@@ -17,8 +18,8 @@ export default function Home() {
             menuItems={["About", "Contacts", "Download", "Pricing", "Account"]}
           />
         </div>
-        <main className="mt-10 flex">
-          <section className="w-1/2">
+        <main className="mt-10 grid grid-cols-2 gap-4">
+          <section className="w-full">
             <PetCounter
               images={[
                 "/img/dog-mini-1.png",
@@ -29,28 +30,17 @@ export default function Home() {
               numberOfPets={324}
             />
           </section>
-          <section className="w-1/2 flex flex-col">
+          <section className="w-full row-span-2 flex flex-col justify-between gap-4">
             <PetHeroImage src="/img/hero-dog.png" />
-            <PetCallToAction ctaText="Acesse agora" />
+            <PetCallToAction ctaText="Access Now" />
+          </section>
+          <section className="w-full">
+            <PetHeroText
+              title="Bring happiness to your home"
+              description="Find the ideal pet for your lifestyle!"
+            />
           </section>
         </main>
-        <h1 className="text-2xl mt-8">TODO...</h1>
-        <p>
-          Add all your finished components to create a website that looks like
-          the top (pink) part of this image. Work on the components. Create
-          stories for them in storybook. Test them. Make sure they are working
-          as expected. Then, add them to this page.
-        </p>
-        <p>
-          When complete, work on the bottom (white) part of the image. Create a
-          new page for it at `about.js`. Add the components you need to create
-          the page. Test them. Make sure they are working as expected. Then, add
-          them to the new page. (Be sure to use PropTypes so storybook can help
-          you test your components.)
-        </p>
-        <div>
-          <img src="/mockups/home.png" alt="Home Page Mockup" />
-        </div>
       </div>
     </div>
   );
