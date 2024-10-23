@@ -18,7 +18,7 @@ export default function Home() {
             menuItems={["About", "Contacts", "Download", "Pricing", "Account"]}
           />
         </div>
-        <main className="mt-10 grid grid-cols-2 gap-4">
+        <main className="mt-10 grid grid-cols-2 auto-rows-min gap-4">
           <section className="w-full">
             <PetCounter
               images={[
